@@ -31,12 +31,5 @@ start()
 
 
 
-
-
-app.use(express.static(path.resolve(__dirname,'../diplom_2')))
-
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../diplom_2/public', 'index.html'))
-  })
   
 
