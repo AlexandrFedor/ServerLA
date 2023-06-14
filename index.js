@@ -17,7 +17,7 @@ app.use(express.static("static"))
 app.use("/auth", authRouter)
 
     try {
-        await mongoose.connect('mongodb+srv://Silence:lostart18@cluster0.b5emxzo.mongodb.net/')
+        await mongoose.connect('mongodb+srv://Silence:lostart18@cluster0.b5emxzo.mongodb.net/?retryWrites=true&w=majority')
         app.listen(PORT, () => console.log(`Server has been started on port ${PORT}`))
     }
 
